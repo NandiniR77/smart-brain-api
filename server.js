@@ -10,10 +10,8 @@ const saltRounds = 10;
 const knex = require('knex')({
   client: 'pg',
   connection: {
-    host : 'postgresql-dimensional-65474',
-    user : 'postgres',
-    password : 'test',
-    database : 'smartbrain'
+    host : process.env.DATABASE_URL,
+    ssl : true
   }
 });
  
